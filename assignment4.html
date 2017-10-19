@@ -3,98 +3,142 @@
 <head>
 <title>Assignment 4</title>
 <meta charset="UTF-8">
+<style type="text/css" media="screen">
+	.gameBoard{
+		margin: auto;
+		max-height: 100%;
+		max-width: 100%;
+
+	}
+	.player{
+		border-top: 1px solid #000;
+		margin: auto;
+
+	}
+	.player > img{
+		width: 5%;
+	}
+	.select{
+		font-weight: bold;
+	}
+	img{
+		padding: 0;
+		max-height: 100%;
+		max-width: 100%;
+
+	}
+
+</style>
 </head>
 <body>
-    <div class="gameBoard">
-        <img src="post-images/73.jpg">
-        <img src="post-images/74.jpg">
-        <img src="post-images/74.jpg">
-        <img src="post-images/76.jpg">
-        <img src="post-images/77.jpg">
-        <img src="post-images/78.jpg">
-        <img src="post-images/79.jpg">
-        <img src="post-images/80.jpg">
-        <img src="post-images/81.jpg">
+    <div class="container">
+    	<div class="gameBoard">
+        <img src="post-images/73.jpg" id="cell73">
+        <img src="post-images/74.jpg" id="cell74">
+        <img src="post-images/74.jpg" id="cell75">
+        <img src="post-images/76.jpg" id="cell76">
+        <img src="post-images/77.jpg" id="cell77">
+        <img src="post-images/78.jpg" id="cell78">
+        <img src="post-images/79.jpg" id="cell79">
+        <img src="post-images/80.jpg" id="cell80">
+        <img src="post-images/81.jpg" id="cell81">
         <br>
-        <img src="post-images/72.jpg">
-        <img src="post-images/71.jpg">
-        <img src="post-images/70.jpg">
-        <img src="post-images/69.jpg">
-        <img src="post-images/68.jpg">
-        <img src="post-images/67.jpg">
-        <img src="post-images/66.jpg">
-        <img src="post-images/65.jpg">
-        <img src="post-images/64.jpg">
+        <img src="post-images/72.jpg" id="cell72">
+        <img src="post-images/71.jpg" id="cell71">
+        <img src="post-images/70.jpg" id="cell70">
+        <img src="post-images/69.jpg" id="cell69">
+        <img src="post-images/68.jpg" id="cell68">
+        <img src="post-images/67.jpg" id="cell67">
+        <img src="post-images/66.jpg" id="cell66">
+        <img src="post-images/65.jpg" id="cell65">
+        <img src="post-images/64.jpg" id="cell64">
         <br>
-        <img src="post-images/55.jpg">
-        <img src="post-images/56.jpg">
-        <img src="post-images/57.jpg">
-        <img src="post-images/58.jpg">
-        <img src="post-images/59.jpg">
-        <img src="post-images/60.jpg">
-        <img src="post-images/61.jpg">
-        <img src="post-images/62.jpg">
-        <img src="post-images/63.jpg">
+        <img src="post-images/55.jpg" id="cell55">
+        <img src="post-images/56.jpg" id="cell56">
+        <img src="post-images/57.jpg" id="cell57">
+        <img src="post-images/58.jpg" id="cell58">
+        <img src="post-images/59.jpg" id="cell59">
+        <img src="post-images/60.jpg" id="cell60">
+        <img src="post-images/61.jpg" id="cell61">
+        <img src="post-images/62.jpg" id="cell62">
+        <img src="post-images/63.jpg" id="cell63">
         <br>
-        <img src="post-images/54.jpg">
-        <img src="post-images/53.jpg">
-        <img src="post-images/52.jpg">
-        <img src="post-images/51.jpg">
-        <img src="post-images/50.jpg">
-        <img src="post-images/49.jpg">
-        <img src="post-images/48.jpg">
-        <img src="post-images/47.jpg">
-        <img src="post-images/46.jpg">
+        <img src="post-images/54.jpg" id="cell54">
+        <img src="post-images/53.jpg" id="cell53">
+        <img src="post-images/52.jpg" id="cell52">
+        <img src="post-images/51.jpg" id="cell51">
+        <img src="post-images/50.jpg" id="cell50">
+        <img src="post-images/49.jpg" id="cell49">
+        <img src="post-images/48.jpg" id="cell48">
+        <img src="post-images/47.jpg" id="cell47">
+        <img src="post-images/46.jpg" id="cell46">
         <br>
-        <img src="post-images/37.jpg">
-        <img src="post-images/38.jpg">
-        <img src="post-images/39.jpg">
-        <img src="post-images/40.jpg">
-        <img src="post-images/41.jpg">
-        <img src="post-images/42.jpg">
-        <img src="post-images/43.jpg">
-        <img src="post-images/44.jpg">
-        <img src="post-images/45.jpg">
+        <img src="post-images/37.jpg" id="cell37">
+        <img src="post-images/38.jpg" id="cell38">
+        <img src="post-images/39.jpg" id="cell39">
+        <img src="post-images/40.jpg" id="cell40">
+        <img src="post-images/41.jpg" id="cell41">
+        <img src="post-images/42.jpg" id="cell42">
+        <img src="post-images/43.jpg" id="cell43">
+        <img src="post-images/44.jpg" id="cell44">
+        <img src="post-images/45.jpg" id="cell45">
         <br>
-        <img src="post-images/36.jpg">
-        <img src="post-images/35.jpg">
-        <img src="post-images/34.jpg">
-        <img src="post-images/33.jpg">
-        <img src="post-images/32.jpg">
-        <img src="post-images/31.jpg">
-        <img src="post-images/30.jpg">
-        <img src="post-images/29.jpg">
-        <img src="post-images/28.jpg">
+        <img src="post-images/36.jpg" id="cell36">
+        <img src="post-images/35.jpg" id="cell35">
+        <img src="post-images/34.jpg" id="cell34">
+        <img src="post-images/33.jpg" id="cell33">
+        <img src="post-images/32.jpg" id="cell32">
+        <img src="post-images/31.jpg" id="cell31">
+        <img src="post-images/30.jpg" id="cell30">
+        <img src="post-images/29.jpg" id="cell29">
+        <img src="post-images/28.jpg" id="cell28">
         <br>
-        <img src="post-images/19.jpg">
-        <img src="post-images/20.jpg">
-        <img src="post-images/21.jpg">
-        <img src="post-images/22.jpg">
-        <img src="post-images/23.jpg">
-        <img src="post-images/24.jpg">
-        <img src="post-images/25.jpg">
-        <img src="post-images/26.jpg">
-        <img src="post-images/27.jpg">
+        <img src="post-images/19.jpg" id="cell19">
+        <img src="post-images/20.jpg" id="cell20">
+        <img src="post-images/21.jpg" id="cell21">
+        <img src="post-images/22.jpg" id="cell22">
+        <img src="post-images/23.jpg" id="cell23">
+        <img src="post-images/24.jpg" id="cell24">
+        <img src="post-images/25.jpg" id="cell25">
+        <img src="post-images/26.jpg" id="cell26">
+        <img src="post-images/27.jpg" id="cell27">
         <br>
-        <img src="post-images/18.jpg">
-        <img src="post-images/17.jpg">
-        <img src="post-images/16.jpg">
-        <img src="post-images/15.jpg">
-        <img src="post-images/14.jpg">
-        <img src="post-images/13.jpg">
-        <img src="post-images/12.jpg">
-        <img src="post-images/11.jpg">
-        <img src="post-images/10.jpg">
+        <img src="post-images/18.jpg" id="cell18">
+        <img src="post-images/17.jpg" id="cell17">
+        <img src="post-images/16.jpg" id="cell16">
+        <img src="post-images/15.jpg" id="cell15">
+        <img src="post-images/14.jpg" id="cell14">
+        <img src="post-images/13.jpg" id="cell13">
+        <img src="post-images/12.jpg" id="cell12">
+        <img src="post-images/11.jpg" id="cell11">
+        <img src="post-images/10.jpg" id="cell10">
         <br>
-        <img src="post-images/1.jpg">
-        <img src="post-images/2.jpg">
-        <img src="post-images/3.jpg">
-        <img src="post-images/4.jpg">
-        <img src="post-images/5.jpg">
-        <img src="post-images/6.jpg">
-        <img src="post-images/7.jpg">
-        <img src="post-images/8.jpg">
-        <img src="post-images/9.jpg">
-    </div>
+        <img src="post-images/1.jpg" id="cell1">
+        <img src="post-images/2.jpg" id="cell2">
+        <img src="post-images/3.jpg" id="cell3">
+        <img src="post-images/4.jpg" id="cell4">
+        <img src="post-images/5.jpg" id="cell5">
+        <img src="post-images/6.jpg" id="cell6">
+        <img src="post-images/7.jpg" id="cell7">
+        <img src="post-images/8.jpg" id="cell8">
+        <img src="post-images/9.jpg" id="cell9">
+		</div>
+
+    	<div id="player" class="player">
+    	<p id="player" class="select">Choose a character, Player 1!</p>
+
+    	<img src="post-images/player1Image1.jpg">
+    	<img src="post-images/player1Image2.jpg">
+    	<img src="post-images/player1Image3.jpg">
+    	<img src="post-images/player2Image1.jpg">
+    	<img src="post-images/player2Image2.jpg">
+    	<img src="post-images/player2Image3.jpg">
+		</div>
+	</div>
+    <script>
+
+    	var board = [];
+
+    </script>
 </body>
 </html>
