@@ -16,11 +16,18 @@
 
 	}
 	.player > img{
-		width: 5%;
+		width: 7.5%;
+        padding-bottom: 10px;
 	}
 	.select{
 		font-weight: bold;
 	}
+    .upNow{
+        font-weight: bold;
+    }
+    .playerImg{
+        padding-bottom: 10px;
+    }
 	img{
 		padding: 0;
 		max-height: 100%;
@@ -125,14 +132,16 @@
 		</div>
 
     	<div id="player" class="player">
-    	<p id="player" class="select">Choose a character, Player 1!</p>
-
-    	<img src="post-images/player1Image1.jpg">
-    	<img src="post-images/player1Image2.jpg">
-    	<img src="post-images/player1Image3.jpg">
-    	<img src="post-images/player2Image1.jpg">
-    	<img src="post-images/player2Image2.jpg">
-    	<img src="post-images/player2Image3.jpg">
+    	<p>Up Now:</p>
+        <p id = "upNow" class="upNow">Player 1</p>
+        <img src="post-images/player1Image3.jpg" class="playerImg">
+        <p>Up Next:</p>
+        <p id = "upNext" class="upNow">Player 2</p>
+        <img src="post-images/player2Image2.jpg" class="playerImg">
+        <br>
+        <br>
+        <img src="post-images/die1.png">
+        <p>Click to Roll</p>
 		</div>
 	</div>
     <script>
