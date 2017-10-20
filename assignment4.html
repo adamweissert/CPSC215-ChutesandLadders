@@ -28,6 +28,9 @@
     .playerImg{
         padding-bottom: 10px;
     }
+    #dieImg{
+        cursor: pointer;    
+    }
 	img{
 		padding: 0;
 		max-height: 100%;
@@ -140,14 +143,23 @@
         <img src="post-images/player2Image2.jpg" class="playerImg">
         <br>
         <br>
-        <img src="post-images/die1.png">
-        <p>Click to Roll</p>
+        <img src="post-images/die1.png" onclick="rollandMove()" id="dieImg">
 		</div>
 	</div>
     <script>
-
-    	var board = [];
-
+        var players = ['', ''];
+        var gameBoard = [];
+        function rollandMove(){
+            var sides = 6;
+            var die = document.getElementById('dieImg');
+            var upNow = document.getElementById('upNow');
+            var upNext = document.getElementById('upNext');
+            var rand = Math.floor(Math.random() * sides) + 1;
+            
+            die.src = 'post-images/die' + rand + '.png';
+            
+            
+        }
     </script>
 </body>
 </html>
