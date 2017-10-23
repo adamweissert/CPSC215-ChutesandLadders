@@ -138,6 +138,7 @@
         <img src="post-images/9.jpg" id="cell9">
 		</div>
 
+<<<<<<< HEAD
     	<!--div id="player" class="player">
             Up Now:
             <p>Player 1</p>
@@ -166,6 +167,20 @@
          <img src="post-images/die1.png" onclick="rollandMove()" id="dieImg">
         </div>
     
+=======
+    	<div id="player" class="player">
+    	<p>Up Now:</p>
+        <p id = "upNow" class="upNow">Player 1</p>
+        <img src="post-images/player1Image3.jpg" id="pImgNow" class="playerImg">
+        <p>Up Next:</p>
+        <p id = "upNext" class="upNow">Player 2</p>
+        <img src="post-images/player2Image2.jpg" id="pImgNext" class="playerImg">
+        <br>
+        <br>
+        <img src="post-images/die1.png" onclick="rollandMove()" id="dieImg">
+		</div>
+	</div>
+>>>>>>> 869ef05fbd06f1e9e257ce66e443c6995374c5a2
     <script>
         var players = ['', ''];
         var gameBoard = [];
@@ -261,7 +276,8 @@
 			gamePos[79] = document.getElementById('cell80');
 			gamePos[80] = document.getElementById('cell81');
 			
-		
+		    var p1Val = 0;
+            var p2Val = 0;
         function rollandMove(){
             var sides = 6;
             var die = document.getElementById('dieImg');
@@ -269,7 +285,35 @@
             var upNext = document.getElementById('upNext');
             var rand = Math.floor(Math.random() * sides) + 1;
             
+            var ticker = 1;
+            var pNow = document.getElementById('pImgNow');
+            var pNext = document.getElementById('pImgNext');
+            var stor;
+            
+            if (ticker==1){
+            p1Val = p1Val+rand;
+            gamePos[p1Val-1].src = pNow.src;
+            ticker = ticker+1;
+            } else if (ticker ==2 ){
+            p2Val = p2Val+rand;
+            gamePos[p2Val-1].src = pNow.src;
+            ticker = ticker-1;
+            }
+            
+            stor = pNext.src;
+            pNext.src=pNow.src;
+            pNow.src=stor;
+            
+            for (i=0; i<81; i++){
+                if (gamePos[i].src == pNow.src || gamePos[i].src == pNext.src){
+                    gamePos[i].src = 'post-images/'+i+'.jpg'
+                }
+            }
+            
+            
             die.src = 'post-images/die' + rand + '.png';
+            
+            
             
 			//test comment ayy lmao
 		
