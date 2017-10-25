@@ -4,16 +4,22 @@
 <title>Assignment 4</title>
 <meta charset="UTF-8">
 <style type="text/css" media="screen">
+    .playerandDie{
+        float: right;
+        width: 100%;
+        
+    }
 	.gameBoard{
+        width: 100%;
 		margin: auto;
-		max-height: 100%;
-		max-width: 100%;
+        float: left;
 
 	}
 	.players{
-		border-top: 1px solid #000;
 		margin: auto;
         padding-bottom: 10px;
+        width: 100%;
+        float: left;
 	}
     .order{
         font-weight: bold;
@@ -30,7 +36,6 @@
         position: relative;
         margin: 0px auto;
         width: 100%;
-        margin-top: 250px;
     }
     #upNow{
         padding: 10px;
@@ -46,6 +51,7 @@
 </style>
 </head>
 <body>
+    <div class="container">
     	<div class="gameBoard">
         <img src="post-images/73.jpg" id="cell73">
         <img src="post-images/74.jpg" id="cell74">
@@ -137,20 +143,7 @@
         <img src="post-images/8.jpg" id="cell8">
         <img src="post-images/9.jpg" id="cell9">
 		</div>
-
-
-    	<!--div id="player" class="player">
-            Up Now:
-            <p>Player 1</p>
-            <img src="post-images/player1Image3.jpg" class="playerImg">
-            </div>
-            <div>
-            <p>Up Next</p>
-            <img src="post-images/player2Image2.jpg" class="playerImg">
-            </div>
-        <p id = "upNext" class="upNow">Player 2</p>
-        
-        </div-->
+        <div class="playerandDie">
         <div id="players" class="players">
             <div id="upNow" class="order">
             <label for="upNow" id="current">Player 1</label>
@@ -163,9 +156,24 @@
             <img src = "post-images/player2Image2.jpg" id="pImgNext">
             </div>
         </div>
-       <div class="die">
+        <div class="die">
          <img src="post-images/die1.png" onclick="rollandMove()" id="dieImg">
         </div>
+    </div>
+    	<!--div id="player" class="player">
+            Up Now:
+            <p>Player 1</p>
+            <img src="post-images/player1Image3.jpg" class="playerImg">
+            </div>
+            <div>
+            <p>Up Next</p>
+            <img src="post-images/player2Image2.jpg" class="playerImg">
+            </div>
+        <p id = "upNext" class="upNow">Player 2</p>
+        
+        </div-->
+
+       
     <script>
         var players = ['', ''];
         var gameBoard = [];
