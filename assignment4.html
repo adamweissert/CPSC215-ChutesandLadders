@@ -49,7 +49,7 @@
     	<div class="gameBoard">
         <img src="post-images/73.jpg" id="cell73">
         <img src="post-images/74.jpg" id="cell74">
-        <img src="post-images/74.jpg" id="cell75">
+        <img src="post-images/75.jpg" id="cell75">
         <img src="post-images/76.jpg" id="cell76">
         <img src="post-images/77.jpg" id="cell77">
         <img src="post-images/78.jpg" id="cell78">
@@ -263,6 +263,7 @@
 			
 		    var p1Val = 0;
             var p2Val = 0;
+            var ticker = 1;
         function rollandMove(){
             var sides = 6;
             var die = document.getElementById('dieImg');
@@ -273,25 +274,136 @@
             var textNow = document.getElementById('current');
             var textNext = document.getElementById('onDeck');
             
-            var ticker = 1;
+            
             var pNow = document.getElementById('pImgNow');
             var pNext = document.getElementById('pImgNext');
             var stor, stor2;
             
-             for (i=0; i<81; i++){
-                if (gamePos[i].src == pNow.src || gamePos[i].src == pNext.src){
-                    gamePos[i].src = 'post-images/'+(i+1)+'.jpg';
-                }
-            }
+            
+            
+            
+            console.log("pre-ticker: " +ticker);
             
             if (ticker==1){
             p1Val = p1Val+rand;
-            gamePos[p1Val-1].src = pNow.src;
+                if (p1Val != p2Val){
+                    if(p1Val==1){
+                        p1Val=22;
+                        gamePos[p1Val-1].src = pNow.src;
+                    }else if(p1Val==4){
+                        p1Val=13;
+                        gamePos[p1Val-1].src = pNow.src;
+                    }else if(p1Val==8){
+                        p1Val=28;
+                        gamePos[p1Val-1].src = pNow.src;
+                    }else if(p1Val==24){
+                        p1Val=7;
+                        gamePos[p1Val-1].src = pNow.src;
+                    }else if(p1Val==25){
+                        p1Val=70;
+                        gamePos[p1Val-1].src = pNow.src;
+                    }else if(p1Val==32){
+                        p1Val=3;
+                        gamePos[p1Val-1].src = pNow.src;
+                    }else if(p1Val==35){
+                        p1Val=39;
+                        gamePos[p1Val-1].src = pNow.src;
+                    }else if(p1Val==36){
+                        p1Val=17;
+                        gamePos[p1Val-1].src = pNow.src;
+                    }else if(p1Val==46){
+                        p1Val=65;
+                        gamePos[p1Val-1].src = pNow.src;
+                    }else if(p1Val==55){
+                        p1Val=37;
+                        gamePos[p1Val-1].src = pNow.src;
+                    }else if(p1Val==56){
+                        p1Val=72;
+                        gamePos[p1Val-1].src = pNow.src;
+                    }else if(p1Val==75){
+                        p1Val=38;
+                        gamePos[p1Val-1].src = pNow.src;
+                    }else if(p1Val==77){
+                        p1Val=49;
+                        gamePos[p1Val-1].src = pNow.src;
+                    }else if(p1Val==80){
+                        p1Val=30;
+                        gamePos[p1Val-1].src = pNow.src;
+                    }else if(p1Val==81 || p1Val>81){
+                        p1Val=81;
+                        gamePos[p1Val-1].src = pNow.src;
+                        alert('PLAYER 1 WINS!');
+                        window.open("https://www.youtube.com/watch?v=_fjEViOF4JE","_self");
+                    }
+                    else{
+                gamePos[p1Val-1].src = pNow.src;
+                    }
+                }else {
+                    alert("Player 1 lost their turn!");
+                    p1Val=p1Val-rand;
+                }
             ticker = ticker+1;
+                console.log("p1 ticker: " +ticker);
             } else if (ticker ==2 ){
             p2Val = p2Val+rand;
-            gamePos[p2Val-1].src = pNow.src;
+                if(p2Val != p1Val){
+                    if(p2Val==1){
+                        p2Val=22;
+                        gamePos[p2Val-1].src = pNow.src;
+                    }else if(p2Val==4){
+                        p2Val=13;
+                        gamePos[p2Val-1].src = pNow.src;
+                    }else if(p2Val==8){
+                        p2Val=28;
+                        gamePos[p2Val-1].src = pNow.src;
+                    }else if(p2Val==24){
+                        p2Val=7;
+                        gamePos[p2Val-1].src = pNow.src;
+                    }else if(p2Val==25){
+                        p2Val=70;
+                        gamePos[p2Val-1].src = pNow.src;
+                    }else if(p2Val==32){
+                        p2Val=3;
+                        gamePos[p2Val-1].src = pNow.src;
+                    }else if(p2Val==35){
+                        p2Val=39;
+                        gamePos[p2Val-1].src = pNow.src;
+                    }else if(p2Val==36){
+                        p2Val=17;
+                        gamePos[p2Val-1].src = pNow.src;
+                    }else if(p2Val==46){
+                        p2Val=65;
+                        gamePos[p2Val-1].src = pNow.src;
+                    }else if(p2Val==55){
+                        p2Val=37;
+                        gamePos[p2Val-1].src = pNow.src;
+                    }else if(p2Val==56){
+                        p2Val=72;
+                        gamePos[p2Val-1].src = pNow.src;
+                    }else if(p2Val==75){
+                        p2Val=38;
+                        gamePos[p2Val-1].src = pNow.src;
+                    }else if(p2Val==77){
+                        p2Val=49;
+                        gamePos[p2Val-1].src = pNow.src;
+                    }else if(p2Val==80){
+                        p2Val=30;
+                        gamePos[p2Val-1].src = pNow.src;
+                    }else if(p2Val==81 || p2Val>81){
+                        p2Val=81;
+                        gamePos[p2Val-1].src = pNow.src;
+                        alert('PLAYER 1 WINS!');
+                        window.open("https://www.youtube.com/watch?v=_fjEViOF4JE","_self");
+                    }
+                    else{
+                gamePos[p2Val-1].src = pNow.src;
+                    }
+                }else{
+                    alert("Player 2 lost their turn!");
+                    p2Val=p2Val-rand;
+                }
             ticker = ticker-1;
+                console.log("p2 ticker: " +ticker);
             }
             
             stor = pNext.src;
@@ -303,12 +415,20 @@
             textNext.innerHTML=textNow.innerHTML;
             textNow.innerHTML=stor2;
            
+             for (i=0; i<81; i++){
+                if ((i+1) == p1Val || (i+1) == p2Val){
+                    
+                } else{
+                    gamePos[i].src = 'post-images/'+(i+1)+'.jpg';
+                }
+            }
             
             
             die.src = 'post-images/die' + rand + '.png';
             
             
-            
+            console.log("p1Val: " +p1Val);
+            console.log("p2Val: " +p2Val);
 			//test comment ayy lmao
 		
             
