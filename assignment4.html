@@ -294,7 +294,7 @@
             
             if (ticker==1){
             p1Val = p1Val+rand;
-                if (p1Val != p2Val){
+                if (p1Val != p2Val && p1Val<82){
                     if(p1Val==1){
                         p1Val=22;
                         gamePos[p1Val-1].src = pNow.src;
@@ -354,7 +354,7 @@
                 console.log("p1 ticker: " +ticker);
             } else if (ticker ==2 ){
             p2Val = p2Val+rand;
-                if(p2Val != p1Val){
+                if(p2Val != p1Val && p2Val<82){
                     if(p2Val==1){
                         p2Val=22;
                         gamePos[p2Val-1].src = pNow.src;
@@ -397,7 +397,7 @@
                     }else if(p2Val==80){
                         p2Val=30;
                         gamePos[p2Val-1].src = pNow.src;
-                    }else if(p2Val==81 || p2Val>81){
+                    }else if(p2Val==81){
                         p2Val=81;
                         gamePos[p2Val-1].src = pNow.src;
                         alert('PLAYER 2 WINS!');
