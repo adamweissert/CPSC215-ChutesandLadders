@@ -270,10 +270,13 @@
             var upNext = document.getElementById('upNext');
             var rand = Math.floor(Math.random() * sides) + 1;
             
+            var textNow = document.getElementById('current');
+            var textNext = document.getElementById('onDeck');
+            
             var ticker = 1;
             var pNow = document.getElementById('pImgNow');
             var pNext = document.getElementById('pImgNext');
-            var stor;
+            var stor, stor2;
             
              for (i=0; i<81; i++){
                 if (gamePos[i].src == pNow.src || gamePos[i].src == pNext.src){
@@ -295,6 +298,10 @@
             pNext.src=pNow.src;
             pNow.src=stor;
             
+            
+            stor2 = textNext.innerHTML;
+            textNext.innerHTML=textNow.innerHTML;
+            textNow.innerHTML=stor2;
            
             
             
