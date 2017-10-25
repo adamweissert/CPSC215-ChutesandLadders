@@ -7,4 +7,4 @@ Joseph Pounds
 <br>
 Adam Weissert
 <br>
-Users pick from player images and roll a die to determine how many spaces they move on the game board.
+Players roll a die to determine how many spaces they move on the game board with basic Chutes and Ladders rules. Celebration occurs if a player reaches the 81st spot on the board.
